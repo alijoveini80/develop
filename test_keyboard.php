@@ -1,7 +1,7 @@
 <?php
 
 require 'keyboard/keyboard.php';
-
+require 'sendemoji.php';
 
 /* ----------- need -----------------------------*/
 
