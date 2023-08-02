@@ -23,31 +23,19 @@ function foundOrLostHelp($id = null, $foundOrLost = null, $matn = null, $esm = n
 
     return [
         "get_foundorlost" => [
-            "text" => sendemoji('\xF0\x9F\x94\xBA') . " اول بهمون بگو چیزی رو گم کردی یا پیدا کردی ؟",
-        ],
-        "lost_btn" => [
-            "text" => sendemoji('\xE2\x9D\x8C') . " گم کردم",
-        ],
-        "found_btn" => [
-            "text" => sendemoji('\xE2\x9C\x85') . " پیدا کردم",
+            "fa" => sendemoji('\xF0\x9F\x94\xBA') . " اول بهمون بگو چیزی رو گم کردی یا پیدا کردی ؟",
         ],
         "get_description" => [
-            "text" => sendemoji('\xF0\x9F\x94\xBA') . " یه توضیح مختصر بده ..",
+            "fa" => sendemoji('\xF0\x9F\x94\xBA') . " یه توضیح مختصر بده ..",
         ],
         "get_attach" => [
-            "text" => " اگه میخای فایلی رو پیوست کنی، بفرست برام. در غیر اینصورت از دکمه کیبورد گزینه پیوستی ندارم رو انتخاب کن!",
+            "fa" => " اگه میخای فایلی رو پیوست کنی، بفرست برام. در غیر اینصورت از دکمه کیبورد گزینه پیوستی ندارم رو انتخاب کن!",
         ],
         "finish" => [
-            "text" => $finish,
+            "fa" => $finish,
         ],
         "need_post" => [
-            "text" => $post,
-        ],
-        "error_keyboard" => [
-            "text" => "نفهمیدم! لطفا از کیبورد زیر انتخاب کن.",
-        ],
-        "error_text_msg" => [
-            "text" => "فقط پیام متنی مجاز است!",
+            "fa" => $post,
         ],
     ];
 }
