@@ -1,10 +1,16 @@
 <?php
 
-require 'cancel_button.php';
-require 'chart_button.php';
-require 'found_lost_button.php';
-require 'main_menu_button.php';
-require 'ostad_shenasi_buttons.php';
-require 'umzfood_button.php';
-require 'umziha_button.php';
-require 'umzmedia_button.php';
+require 'admin/admin_main_menu_button.php';
+
+require 'common/cancel_button.php';
+require 'common/back_to_main_menu_button.php';
+
+require 'user/chart_button.php';
+require 'user/found_lost_button.php';
+require 'user/main_menu_button.php';
+require 'user/ostad_shenasi_buttons.php';
+require 'user/umzfood_button.php';
+require 'user/umziha_button.php';
+require 'user/umzmedia_button.php';
+require 'user/send_study_groups.php';
+require 'user/new_incoming_students_button.php';
