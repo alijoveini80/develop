@@ -18,7 +18,7 @@ print_r(needHelp()["finish"]);
 echo "<br>";
 print_r(needHelp(10001, "Lorem ipsum dolor, sit amet consectetur adipisicing elit.", "Ali")["need_post"]);
 echo "<br>";
-print_r(needHelp()["error_msg"]);
+print_r(needHelp()["error_text_msg"]);
 echo "<br>";
 /* ----------- question -----------------------------*/
 print_r(questionHelp()["get_description"]);
@@ -29,7 +29,7 @@ print_r(questionHelp()["finish"]);
 echo "<br>";
 print_r(questionHelp(10001, "Lorem ipsum dolor, sit amet consectetur adipisicing elit.", "Ali")["need_post"]);
 echo "<br>";
-print_r(questionHelp()["error_msg"]);
+print_r(questionHelp()["error_text_msg"]);
 echo "<br>";
 /* ----------- foundOrLost -----------------------------*/
 print_r(foundOrLostHelp()["get_foundorlost"]);
