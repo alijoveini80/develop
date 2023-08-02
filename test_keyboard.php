@@ -5,11 +5,11 @@ require 'sendemoji.php';
 
 /* ----------- need -----------------------------*/
 
-print_r(ostadShenasiGroupButton());
+print_r(json_decode(ostadShenasiGroupButton()));
 echo "\n";
-print_r(ostadShenasiMainMenuButton());
+print_r(json_decode(ostadShenasiMainMenuButton()));
 echo "\n";
-print_r(ostadShenasiCollegeButton());
+print_r(json_decode(ostadShenasiCollegeButton()));
 echo "\n";
-print_r(ostadShenasiStartButton());
+print_r(json_decode(ostadShenasiStartButton()));
 echo "\n";
