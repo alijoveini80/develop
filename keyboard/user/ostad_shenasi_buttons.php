@@ -1,8 +1,8 @@
 <?php
 
-function ostadShenasiMainMenuButton()
+function ostadShenasiMainMenuButton(): array
 {
-    return json_encode([
+    return [
         'keyboard' => [
             [
                 ['text' => sendemoji('\xF0\x9F\x94\xBA') . " معرفی استاد"],
@@ -14,7 +14,7 @@ function ostadShenasiMainMenuButton()
                 ['text' => "بازگشت به منوی اصلی"],
             ],
         ], 'resize_keyboard' => true,
-    ]);
+    ];
 }
 
 function ostadShenasiStartButton()
