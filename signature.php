@@ -17,13 +17,13 @@ function signature(): array
 
     return [
         "umzmedia" => [
-            "text" => $umzmedia,
+            "fa" => $umzmedia,
         ],
         "umziha" => [
-            "text" => $umziha,
+            "fa" => $umziha,
         ],
         "umzfood" => [
-            "text" => $umzfood,
+            "fa" => $umzfood,
         ],
     ];
 }
