@@ -3,7 +3,7 @@
 require 'umziha/need.php';
 require 'umziha/question.php';
 require 'umziha/foundorlost.php';
-require 'error/error_message.php';
+require 'common_messages/common_messages.php';
 require 'keyboard/keyboard.php';
 require 'signature.php';
 require 'base64url.php';
