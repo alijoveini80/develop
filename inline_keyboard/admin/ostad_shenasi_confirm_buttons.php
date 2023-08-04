@@ -72,21 +72,23 @@ function ostadShenasiQuestionConfirmFeedbackButton(array $rows, $reply_to = "")
 {
     $buttons = [];
     foreach ($rows as $row) {
-        array_push($buttons, $row);
+        $row_buttons = [];
+        foreach ($row as $element) {
+            if (array_key_exists("text", $element)) {
+                if ($element["text"] == "تایید") {
+                    $element["text"] = "تایید (ارسال شد!)";
+                    if (!empty($reply_to)) {
+                        if (array_key_exists("callback_data", $element)) {
+                            $element["callback_data"] = $element["callback_data"] . "-" . $reply_to;
+                        }
+                    }
+                }
+            }
+            array_push($row_buttons, $element);
+        }
+        array_push($buttons, $row_buttons);
     }
-    if (!empty($reply_to)) {
-        array_push($buttons, [
-            confirmSingleButton(true, "q-ostad-ok", $reply_to),
-            // ['text' => "تایید (ارسال شد!)", 'callback_data' => "q-ostad-ok" . $reply_to],
-        ]);
-        return json_encode([
-            'inline_keyboard' => $buttons
-        ]);
-    }
-    array_push($buttons, [
-        confirmSingleButton(true, "q-ostad-ok", $reply_to),
-        // ['text' => "تایید (ارسال شد!)", 'callback_data' => "q-ostad-ok"],
-    ]);
+
     return json_encode([
         'inline_keyboard' => $buttons
     ]);
