@@ -26,7 +26,7 @@ function ostadShenasiConfirmFeedbackButton(array $rows, $reply_to = "")
     }
     if (!empty($reply_to)) {
         array_push($buttons, [
-            confirmSingleButton(false, "ostadOK", $reply_to),
+            confirmSingleButton(true, "ostadOK", $reply_to),
             // ['text' => "تایید (ارسال شد!)", 'callback_data' => "ostadOK" . $reply_to],
         ]);
         return json_encode([
@@ -34,7 +34,7 @@ function ostadShenasiConfirmFeedbackButton(array $rows, $reply_to = "")
         ]);
     }
     array_push($buttons, [
-        confirmSingleButton(false, "ostadOK", $reply_to),
+        confirmSingleButton(true, "ostadOK", $reply_to),
         // ['text' => "تایید (ارسال شد!)", 'callback_data' => "ostadOK"],
     ]);
     return json_encode([
@@ -50,14 +50,16 @@ function ostadShenasiQuestionConfirmFeedbackButton(array $rows, $reply_to = "")
     }
     if (!empty($reply_to)) {
         array_push($buttons, [
-            ['text' => "تایید (ارسال شد!)", 'callback_data' => "q-ostad-ok" . $reply_to],
+            confirmSingleButton(true, "q-ostad-ok", $reply_to),
+            // ['text' => "تایید (ارسال شد!)", 'callback_data' => "q-ostad-ok" . $reply_to],
         ]);
         return json_encode([
             'inline_keyboard' => $buttons
         ]);
     }
     array_push($buttons, [
-        ['text' => "تایید (ارسال شد!)", 'callback_data' => "q-ostad-ok"],
+        confirmSingleButton(true, "q-ostad-ok", $reply_to),
+        // ['text' => "تایید (ارسال شد!)", 'callback_data' => "q-ostad-ok"],
     ]);
     return json_encode([
         'inline_keyboard' => $buttons
