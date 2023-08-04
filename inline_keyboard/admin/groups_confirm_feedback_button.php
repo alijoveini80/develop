@@ -8,14 +8,16 @@ function groupsConfirmFeedbackButton(array $rows, $reply_to = "")
     }
     if (!empty($reply_to)) {
         array_push($buttons, [
-            ['text' => "تایید (ارسال شد!)", 'callback_data' => "vizhe-ok" . $reply_to],
+            confirmSingleButton(true, "vizhe-ok", $reply_to),
+            // ['text' => "تایید (ارسال شد!)", 'callback_data' => "vizhe-ok" . $reply_to],
         ]);
         return json_encode([
             'inline_keyboard' => $buttons
         ]);
     }
     array_push($buttons, [
-        ['text' => "تایید (ارسال شد!)", 'callback_data' => "vizhe-ok"],
+        confirmSingleButton(true, "vizhe-ok", $reply_to),
+        // ['text' => "تایید (ارسال شد!)", 'callback_data' => "vizhe-ok"],
     ]);
     return json_encode([
         'inline_keyboard' => $buttons

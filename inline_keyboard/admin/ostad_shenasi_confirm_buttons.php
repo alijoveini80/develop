@@ -11,7 +11,8 @@ function ostadShenasiConfirmButton($from_id, $msg_id, $reply_to)
                 ['text' => "گزارش خطا", 'url' => "https://t.me/" . BOT_ID . "?start=" . $deeplink],
             ],
             [
-                ['text' => "تایید", 'callback_data' => "ostadOK" . $reply_to],
+                confirmSingleButton(false, "ostadOK", $reply_to),
+                // ['text' => "تایید", 'callback_data' => "ostadOK" . $reply_to],
             ],
         ],
     ]);
@@ -25,14 +26,16 @@ function ostadShenasiConfirmFeedbackButton(array $rows, $reply_to = "")
     }
     if (!empty($reply_to)) {
         array_push($buttons, [
-            ['text' => "تایید (ارسال شد!)", 'callback_data' => "ostadOK" . $reply_to],
+            confirmSingleButton(false, "ostadOK", $reply_to),
+            // ['text' => "تایید (ارسال شد!)", 'callback_data' => "ostadOK" . $reply_to],
         ]);
         return json_encode([
             'inline_keyboard' => $buttons
         ]);
     }
     array_push($buttons, [
-        ['text' => "تایید (ارسال شد!)", 'callback_data' => "ostadOK"],
+        confirmSingleButton(false, "ostadOK", $reply_to),
+        // ['text' => "تایید (ارسال شد!)", 'callback_data' => "ostadOK"],
     ]);
     return json_encode([
         'inline_keyboard' => $buttons

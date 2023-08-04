@@ -1,26 +1,16 @@
 <?php
 
-function chatsGroupButton($pid, $reply_to, $ref)
-{
-    return json_encode([
-        'inline_keyboard' => [
-            [
-                ['text' => $pid, 'callback_data' => "view-id-" . $pid], ['text' => "تایید", 'callback_data' => "umziha-" . $reply_to . "-" . $ref],
-            ],
-        ],
-    ]);
-}
-
 function chatsGroupConfirmButton($pid, $reply_to, $ref, $url = "")
 {
     if (!empty($url)) {
         return json_encode([
             'inline_keyboard' => [
                 [
-                    ['text' => $pid, 'callback_data' => "view-id-" . $pid], ['text' => "تایید", 'callback_data' => "umziha-" . $reply_to . "-" . $ref],
+                    adminViewIdSingleButton($pid),
+                    confirmSingleButton(false, "umziha", $reply_to, $ref),
                 ],
                 [
-                    ['text' => "تایید (ارسال شد!)", 'url' => $url],
+                    sendMessageSingleButton($url),
                 ],
             ],
         ]);
@@ -28,7 +18,33 @@ function chatsGroupConfirmButton($pid, $reply_to, $ref, $url = "")
     return json_encode([
         'inline_keyboard' => [
             [
-                ['text' => $pid, 'callback_data' => "view-id-" . $pid], ['text' => "تایید", 'callback_data' => "umziha-" . $reply_to . "-" . $ref],
+                adminViewIdSingleButton($pid),
+                confirmSingleButton(false, "umziha", $reply_to, $ref),
+            ],
+        ],
+    ]);
+}
+
+function chatsGroupConfirmFeedbackButton($pid, $reply_to, $ref, $url = "")
+{
+    if (!empty($url)) {
+        return json_encode([
+            'inline_keyboard' => [
+                [
+                    adminViewIdSingleButton($pid),
+                    confirmSingleButton(true, "umziha", $reply_to, $ref),
+                ],
+                [
+                    sendMessageSingleButton($url),
+                ],
+            ],
+        ]);
+    }
+    return json_encode([
+        'inline_keyboard' => [
+            [
+                adminViewIdSingleButton($pid),
+                confirmSingleButton(true, "umziha", $reply_to, $ref),
             ],
         ],
     ]);
