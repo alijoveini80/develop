@@ -11,6 +11,7 @@ function ostadShenasiConfirmButton($from_id, $msg_id, $reply_to)
                 ['text' => "گزارش خطا", 'url' => "https://t.me/" . BOT_ID . "?start=" . $deeplink],
             ],
             [
+                adminViewIdSingleButton($from_id),
                 confirmSingleButton(false, "ostadOK", $reply_to),
                 // ['text' => "تایید", 'callback_data' => "ostadOK" . $reply_to],
             ],
@@ -32,6 +33,7 @@ function ostadShenasiQuestionConfirmButton($from_id, $msg_id, $reply_to){
                 ['text' => "گزارش خطا", 'url' => "https://t.me/" . BOT_ID . "?start=" . $deeplink],
             ],
             [
+                adminViewIdSingleButton($from_id),
                 confirmSingleButton(false, "ostadOK", $reply_to),
                 // ['text' => "تایید", 'callback_data' => "ostadOK" . $reply_to],
             ],
