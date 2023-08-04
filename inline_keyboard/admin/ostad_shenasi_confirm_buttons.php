@@ -30,7 +30,8 @@ function ostadShenasiQuestionConfirmButton($from_id, $msg_id, $reply_to){
             [
                 /*['text' => "به اشتراک بگذارید", 'switch_inline_query' => "ostad-shenasi->" . $msg_id],*/
                 /*['text' => "کامنت ها", 'login_url' => ['url' => "https://comments.bot/thread/" . $page, 'bot_username' => "@CommentsBot"]],*/
-                ['text' => "گزارش خطا", 'url' => "https://t.me/" . BOT_ID . "?start=" . $deeplink],
+                reportOstadShenasiSingleButton("https://t.me/" . BOT_ID . "?start=" . $deeplink)
+                // ['text' => "گزارش خطا", 'url' => "https://t.me/" . BOT_ID . "?start=" . $deeplink],
             ],
             [
                 adminViewIdSingleButton($from_id),
@@ -87,4 +88,8 @@ function ostadShenasiQuestionConfirmFeedbackButton(array $rows, $reply_to = "")
     return json_encode([
         'inline_keyboard' => $buttons
     ]);
+}
+
+function reportOstadShenasiSingleButton($url){
+    return array('text' => "گزارش خطا", 'url' => $url);
 }
