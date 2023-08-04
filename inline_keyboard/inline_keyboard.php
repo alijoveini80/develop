@@ -19,4 +19,4 @@ require "admin/umzfood_confirm_feedback.php";
 require "admin/umziha_confirm_feedback.php";
 require "admin/view_id_button.php";
 
-require "inline_keyboard.php";
+require "user/check_join_to_sponsor_channel_button.php";
