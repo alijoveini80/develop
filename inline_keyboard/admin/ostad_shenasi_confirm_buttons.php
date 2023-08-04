@@ -53,6 +53,9 @@ function ostadShenasiConfirmFeedbackButton(array $rows, $reply_to = "")
             if (array_key_exists("text", $element)) {
                 if ($element["text"] == "تایید") {
                     $element["text"] = "تایید (ارسال شد!)";
+                    if (!empty($reply_to)) {
+                        $element["callback_data"] = $element["callback_data"] . "-" . $reply_to;
+                    }
                 }
             }
             array_push($row_buttons, $element);
