@@ -6,7 +6,7 @@ function chartConfirmButton($pid)
         'inline_keyboard' => [
             [
                 adminViewIdSingleButton($pid),
-                confirmSingleButton(false,"chart"),
+                confirmSingleButton(false, "chart"),
             ],
         ],
     ]);
