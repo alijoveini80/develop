@@ -1,6 +1,6 @@
 <?php
 
-function confirmSingleButton($is_confirmed, $category, $reply_to = "", $ref = ""): array
+function confirmSingleButton(bool $is_confirmed, $category, $reply_to = "", $ref = ""): array
 {
     $is_confirmed_text = "";
     if($is_confirmed){
