@@ -42,9 +42,6 @@ $rows = [
         ]
     ]
 ];
-// print_r($rows[2][1]["text"]);
-// $rows[2][1]["text"] = "تایید (ارسال شد!)";
-// print_r($rows[2][1]["text"]);
-$test = ostadShenasiConfirmFeedbackButton($rows, 1972001);
 
+$test = ostadShenasiConfirmFeedbackButton($rows, 1972001);
 print_r($test);
