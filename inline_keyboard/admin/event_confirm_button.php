@@ -1,6 +1,6 @@
 <?php
 
-function eventConfirmButton($is_confirmed, $pid)
+function eventConfirmButton(bool $is_confirmed, $pid)
 {
     return json_encode([
         'inline_keyboard' => [
