@@ -1,14 +1,14 @@
 <?php
 
-function updateButtonText(array $rows, $search, $replace)
+function deleteButton(array $rows, $button_text)
 {
     $buttons = [];
     foreach ($rows as $row) {
         $row_buttons = [];
         foreach ($row as $element) {
             if (array_key_exists("text", $element)) {
-                if ($element["text"] == $search) {
-                    $element["text"] = $replace;
+                if ($element["text"] == $button_text) {
+                    continue;
                 }
             }
             array_push($row_buttons, $element);

@@ -3,7 +3,8 @@
 require 'inline_keyboard/inline_keyboard.php';
 require 'inline_keyboard/common/update_button_text.php';
 require 'inline_keyboard/common/update_button_text_to_sent.php';
-require 'inline_keyboard/common/delete_buttons.php';
+require 'inline_keyboard/common/delete_button.php';
+require 'inline_keyboard/common/delete_admin_side_buttons.php';
 require 'base64url.php';
 require 'config.php';
 
@@ -54,5 +55,9 @@ $rows = [
 // $test = updateButtonTextToSent($rows);
 // print_r($test);
 
-$test = deleteButtons($rows, array("تایید"));
+// $test = deleteButton($rows, "تایید");
+// print_r($test);
+// $test = deleteButton($rows, "پاسخ ارسال شده");
+// print_r($test);
+$test = deleteAdminSideButtons($rows, array("تایید", "پاسخ ارسال شده"));
 print_r($test);
