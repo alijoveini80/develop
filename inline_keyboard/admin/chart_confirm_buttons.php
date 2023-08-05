@@ -2,12 +2,19 @@
 
 function chartConfirmButton($pid)
 {
-    return json_encode([
-        'inline_keyboard' => [
-            [
-                adminViewIdSingleButton($pid),
-                confirmSingleButton(false, "chart"),
-            ],
+    $buttons = [
+        [
+            adminViewIdSingleButton($pid),
+            confirmSingleButton(false, "chart"),
         ],
-    ]);
+    ];
+    return sendInlineReplyMarkup($buttons);
+    // return json_encode([
+    //     'inline_keyboard' => [
+    //         [
+    //             adminViewIdSingleButton($pid),
+    //             confirmSingleButton(false, "chart"),
+    //         ],
+    //     ],
+    // ]);
 }

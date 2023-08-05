@@ -5,10 +5,11 @@ require 'inline_keyboard/common/update_button_text.php';
 require 'inline_keyboard/common/update_button_text_to_sent.php';
 require 'inline_keyboard/common/delete_button.php';
 require 'inline_keyboard/common/delete_admin_side_buttons.php';
+require 'inline_keyboard/common/send_inline_reply_markup.php';
 require 'base64url.php';
 require 'config.php';
 
-// $test = chartConfirmButton(6323020);
+$test = chartConfirmButton(6323020);
 // $test = chatsGroupConfirmButton(false, 6323020, "","","https://t.me/ali80");
 // $test = copyClickedButton(array(array('text' => "ali", 'callback_data' => "data")));
 // $test = eventConfirmButton(false, 6323020);
@@ -59,5 +60,5 @@ $rows = [
 // print_r($test);
 // $test = deleteButton($rows, "پاسخ ارسال شده");
 // print_r($test);
-$test = deleteAdminSideButtons($rows, array("تایید", "پاسخ ارسال شده"));
+// $test = deleteAdminSideButtons($rows, array("تایید", "پاسخ ارسال شده"));
 print_r($test);
