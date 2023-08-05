@@ -8,8 +8,5 @@ function confirmSingleButton($category, $reply_to = "", $ref = ""): array
     if (empty($ref)) {
         $ref = "000";
     }
-    return array(
-        'text' => "تایید",
-        'callback_data' => $category . "-" . $reply_to . "-" . $ref
-    );
+    return callbackDataSingleButton("تایید", $category . "-" . $reply_to . "-" . $ref);
 }
