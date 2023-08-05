@@ -1,14 +1,12 @@
 <?php
 
-function adminViewIdButton($pid)
+function adminViewIdButton($pid): array
 {
-    return json_encode([
-        'inline_keyboard' => [
-            [
-                adminViewIdSingleButton($pid)
-            ],
+    return [
+        [
+            adminViewIdSingleButton($pid)
         ],
-    ]);
+    ];
 }
 
 function adminViewIdSingleButton($pid): array

@@ -1,26 +1,14 @@
 <?php
 
-function chatsGroupConfirmButton(bool $is_confirmed, $pid, $reply_to, $ref, $url = "")
+function chatsGroupConfirmButton($pid, $reply_to, $ref, $url): array
 {
-    if (!empty($url)) {
-        return json_encode([
-            'inline_keyboard' => [
-                [
-                    adminViewIdSingleButton($pid),
-                    confirmSingleButton($is_confirmed, "umziha", $reply_to, $ref),
-                ],
-                [
-                    sendMessageSingleButton($url),
-                ],
-            ],
-        ]);
-    }
-    return json_encode([
-        'inline_keyboard' => [
-            [
-                adminViewIdSingleButton($pid),
-                confirmSingleButton($is_confirmed, "umziha", $reply_to, $ref),
-            ],
+    return [
+        [
+            adminViewIdSingleButton($pid),
+            confirmSingleButton("umziha", $reply_to, $ref),
         ],
-    ]);
+        [
+            sendMessageSingleButton($url),
+        ],
+    ];
 }

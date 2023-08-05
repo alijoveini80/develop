@@ -1,13 +1,11 @@
 <?php
 
-function followUpConfirmButton(bool $is_confirmed, $pid)
+function followUpConfirmButton($pid): array
 {
-    return json_encode([
-        'inline_keyboard' => [
-            [
-                adminViewIdSingleButton($pid),
-                confirmSingleButton($is_confirmed, "followup"),
-            ],
+    return [
+        [
+            adminViewIdSingleButton($pid),
+            confirmSingleButton("followup"),
         ],
-    ]);
+    ];
 }

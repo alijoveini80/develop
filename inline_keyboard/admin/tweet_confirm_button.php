@@ -1,13 +1,11 @@
 <?php
 
-function tweetConfirmButton(bool $is_confirmed, $pid)
+function tweetConfirmButton($pid): array
 {
-    return json_encode([
-        'inline_keyboard' => [
-            [
-                adminViewIdSingleButton($pid),
-                confirmSingleButton($is_confirmed, "tweet"),
-            ],
+    return [
+        [
+            adminViewIdSingleButton($pid),
+            confirmSingleButton("tweet"),
         ],
-    ]);
+    ];
 }

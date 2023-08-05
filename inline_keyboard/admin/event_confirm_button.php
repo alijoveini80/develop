@@ -1,13 +1,11 @@
 <?php
 
-function eventConfirmButton(bool $is_confirmed, $pid)
+function eventConfirmButton($pid): array
 {
-    return json_encode([
-        'inline_keyboard' => [
-            [
-                adminViewIdSingleButton($pid),
-                confirmSingleButton($is_confirmed, "event"),
-            ],
+    return [
+        [
+            adminViewIdSingleButton($pid),
+            confirmSingleButton("event"),
         ],
-    ]);
+    ];
 }

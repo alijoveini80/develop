@@ -1,6 +1,6 @@
 <?php
 
-function needButton($pid, $reply_to, $ref, $url): array
+function foundLostConfirmButton($pid, $reply_to, $ref, $url): array
 {
     return [
         [
@@ -8,7 +8,7 @@ function needButton($pid, $reply_to, $ref, $url): array
         ],
         [
             adminViewIdSingleButton($pid),
-            confirmSingleButton("need", $reply_to, $ref),
+            confirmSingleButton("foundlost", $reply_to, $ref),
         ],
     ];
 }

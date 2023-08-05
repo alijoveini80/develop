@@ -1,13 +1,11 @@
 <?php
 
-function newsConfirmButton(bool $is_confirmed, $pid)
+function newsConfirmButton($pid): array
 {
-    return json_encode([
-        'inline_keyboard' => [
-            [
-                adminViewIdSingleButton($pid),
-                confirmSingleButton($is_confirmed, "news"),
-            ],
+    return [
+        [
+            adminViewIdSingleButton($pid),
+            confirmSingleButton("news"),
         ],
-    ]);
+    ];
 }

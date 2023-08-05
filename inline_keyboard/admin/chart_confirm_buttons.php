@@ -1,12 +1,11 @@
 <?php
 
-function chartConfirmButton($pid)
+function chartConfirmButton($pid): array
 {
-    $buttons = [
+    return [
         [
             adminViewIdSingleButton($pid),
-            confirmSingleButton(false, "chart"),
+            confirmSingleButton("chart"),
         ],
     ];
-    return sendInlineReplyMarkup($buttons);
 }
