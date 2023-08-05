@@ -1,12 +1,10 @@
 <?php
 
-function checkJoinToSponsorChannelButton($index)
+function checkJoinToSponsorChannelButton($index): array
 {
-    return json_encode([
-        'inline_keyboard' => [
-            [
-                ['text' => "عضو شدم!", 'callback_data' => "get-status" . $index],
-            ],
+    return [
+        [
+            callbackDataSingleButton("عضو شدم!", "get-status" . $index)
         ],
-    ]);
+    ];
 }
