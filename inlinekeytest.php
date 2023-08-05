@@ -1,6 +1,9 @@
 <?php
 
 require 'inline_keyboard/inline_keyboard.php';
+require 'inline_keyboard/common/update_button_text.php';
+require 'inline_keyboard/common/update_button_text_to_sent.php';
+require 'inline_keyboard/common/delete_buttons.php';
 require 'base64url.php';
 require 'config.php';
 
@@ -43,5 +46,13 @@ $rows = [
     ]
 ];
 
-$test = ostadShenasiConfirmFeedbackButton($rows, 1972001);
+// $test = ostadShenasiConfirmFeedbackButton($rows, 1972001);
+// print_r($test);
+
+// $test = updateButtonText($rows, "تایید", "----------");
+// print_r($test);
+// $test = updateButtonTextToSent($rows);
+// print_r($test);
+
+$test = deleteButtons($rows, array("تایید"));
 print_r($test);
