@@ -1,9 +1,6 @@
 <?php
 
-function deleteAdminSideButtons(array $rows, array $keywords)
+function deleteAdminSideButtons(array $rows): array
 {
-    foreach ($keywords as $key) {
-        $rows = deleteButton($rows, $key);
-    }
-    return $rows;
+    return deleteMultiButtons($rows, array("تایید", "مشاهده پیوی"));
 }
