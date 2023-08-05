@@ -3,7 +3,6 @@
 require "admin/chart_confirm_buttons.php";
 require "admin/chats_group_buttons.php";
 require "admin/confirm_single_buttons.php";
-require "admin/copy_clicked_button.php";
 require "admin/event_confirm_button.php";
 require "admin/follow_up_confrim_buttons.php";
 require "admin/found_lost_buttons.php";
