@@ -1,15 +1,15 @@
 <?php
 
-function ViewIdButton($pid): array
+function adminViewIdButton($pid): array
 {
     return [
         [
-            ViewIdSingleButton($pid)
+            adminViewIdSingleButton($pid)
         ],
     ];
 }
 
-function ViewIdSingleButton($pid): array
+function adminViewIdSingleButton($pid): array
 {
     return callbackDataSingleButton("مشاهده پیوی", "view-id-" . $pid);
 }
