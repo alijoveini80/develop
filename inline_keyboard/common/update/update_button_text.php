@@ -1,6 +1,6 @@
 <?php
 
-function updateButtonText(array $rows, $search, $replace)
+function updateButtonText(array $rows, $search, $replace): array
 {
     $buttons = [];
     foreach ($rows as $row) {

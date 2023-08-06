@@ -1,6 +1,6 @@
 <?php
 
-function updateCallbackDataText(array $rows, $search, $replace)
+function updateCallbackDataText(array $rows, $search, $replace): array
 {
     $buttons = [];
     foreach ($rows as $row) {
